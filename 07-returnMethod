@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace proj01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("count of Numbers : ");
+            int cnt = Convert.ToInt32(Console.ReadLine());
+            int[] Numbers = new int[cnt];
+
+            for (int i = 0; i < cnt; i++)
+            {
+                Console.WriteLine("Enter number[" + (i + 1) + "]");
+                Numbers[i] = Convert.ToInt32(Console.ReadLine());
+
+
+            }
+
+            int sum = addNumbers(cnt, Numbers);
+
+            Console.WriteLine("SUM =" + sum);
+
+            Console.ReadKey();
+
+        }
+
+        static int addNumbers(int cnt, int[] nums)
+        {
+            int sum = 0;
+            cnt = cnt - 1;
+
+            while (cnt >= 0)
+            {
+                sum += nums[cnt];
+                cnt--;
+            }
+            return sum;
+
+        }
+
+    }
+}

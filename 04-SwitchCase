@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace proj01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Please Enter Number Of week :");
+            int numbwerOfWeek = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("====================================");
+
+
+            switch (numbwerOfWeek)
+            {
+                case 1: { Console.WriteLine("Today is Monday"); break; }
+                case 2: { Console.WriteLine("Today is tursday"); break; }
+                case 3: { Console.WriteLine("Today is wendsday"); break; }
+                case 4: { Console.WriteLine("Today is thusday"); break; }
+                case 5: { Console.WriteLine("Today is friday"); break; }
+                case 6: { Console.WriteLine("Today is Saterday"); break; }
+                case 7: { Console.WriteLine("Today is sunday"); break; }
+                default: { Console.WriteLine("Not Found ......"); break; }
+
+            }
+
+            Console.ReadKey();
+       
+        }
+    }
+}

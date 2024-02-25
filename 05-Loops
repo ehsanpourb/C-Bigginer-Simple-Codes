@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace proj01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {               
+                       
+            try
+            {
+                // For Sample 01 
+                int i = 0;
+                for (i = 0; i <= 2; i++)
+                {
+                    Console.WriteLine("conter =" + i);
+                }
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("=============================================");
+                Console.ResetColor();
+
+                // For Sample 02
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Please Enter Number of Persons :");
+                Console.ResetColor();
+
+                int numOfPerson = Convert.ToInt32(Console.ReadLine());
+                string[] Names = new string[numOfPerson];
+
+                for(int j=0;j<numOfPerson;j++)
+                {
+                    Console.WriteLine("Please Enter Person Name" + (j+1) + ":");
+                    Names[j] = Console.ReadLine();
+                }
+
+                Console.WriteLine("=======RESULT List Of Persons ===========");
+
+                // Foreach : Work in collections
+                foreach (string name in Names)
+                {
+                    Console.WriteLine(name);
+                }
+
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("=============================================");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Show from Number to 1");
+                Console.ResetColor();
+
+                Console.WriteLine("Enter a number");
+                int k = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("===========RESULT ============");
+
+                // While 
+
+                while (k>0)
+                {
+                    Console.WriteLine(k);
+                    k--;
+                }
+                Console.ReadKey();
+
+            }
+            catch
+            {
+                Console.WriteLine("Please Enter Just Number");
+            }         
+       
+        }
+    }
+}

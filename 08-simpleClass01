@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter 2 numbers:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Sum Num1 + Num2 = {MyClass.Sum(num1, num2)}");
+
+            Console.ReadKey();
+        }
+    }
+class MyClass
+    {
+        public static int Sum(int a,int b)
+        {
+            return a + b;
+        }
+    }
+}
+
+

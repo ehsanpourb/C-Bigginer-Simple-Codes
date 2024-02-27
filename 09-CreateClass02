@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+            Console.WriteLine("Enter the number of Personal");
+            int pNum = Convert.ToInt32(Console.ReadLine());
+
+            Person[] people = new Person[pNum];
+
+           for (int i=0;i<pNum;i++)
+            {
+                Console.WriteLine($"********* Person {i+1} *********");
+                Console.WriteLine("Please Enter Name:");
+                string pname = Console.ReadLine();
+                Console.WriteLine("Please Enter Family:");
+                string pfamily = Console.ReadLine();
+                Console.WriteLine("Please Enter Website:");
+                string pwebsite = Console.ReadLine();
+
+                Person p = new Person(pname, pfamily, pwebsite);
+                people[i] = p;
+                
+            }
+
+            Console.WriteLine("************** RESULT ********************");
+           foreach(Person person in people)
+            {
+                Console.WriteLine($"Name:{person.name} Family:{person.fmaily} Website:{person.website}");
+            }
+            Console.ReadKey();
+        }
+    }
+
+    class Person
+    {
+        public string name;
+        public string fmaily;
+        public string website;
+
+        public Person(string name,string family,string website)
+        {
+            this.name = name;
+            this.fmaily = family;
+            this.website = website;
+        }
+
+    }
+}

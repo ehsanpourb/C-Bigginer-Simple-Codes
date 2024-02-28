@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace proj01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> nums = new List<int>();
+            nums.Add(12);
+            nums.Add(14);
+            nums.Add(16);
+            nums.Add(18);
+            nums.Add(19);
+            nums.Add(20);
+            nums.Add(22);
+
+            nums.Remove(19);
+            nums.RemoveAt(2);
+
+            Console.ReadKey();
+
+        }
+
+    }
+}

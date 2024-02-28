@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace proj01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            CAR BMW = new CAR();
+
+            Console.WriteLine($"Car Name is:{BMW.carName}");
+
+            Console.WriteLine("Enter the car's speed:");
+            BMW.speed = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine($"Speed is : {BMW.speed}");
+            Console.ReadLine();
+
+
+        }
+
+    }
+    
+    class CAR
+    {
+        private int _speed;
+
+        public int speed
+        {
+            get
+            {
+                return _speed;
+            }
+            set
+            {
+                if (value > 200)
+                {
+                    Console.WriteLine("Not Valid Speed .....");
+                    _speed = 0;
+                }
+                else
+                {
+                    _speed = value;
+                }
+            }
+        }
+
+        private string _carName = "BMW";
+        public string carName { get { return _carName; }  }
+        
+
+    }
+}
